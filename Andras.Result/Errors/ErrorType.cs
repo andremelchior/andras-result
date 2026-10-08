@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Andras.Result.Errors
+﻿namespace Andras.Result.Errors
 {
-    internal class ErrorType
+    public enum ErrorType
     {
+        Validation,
+        Unauthorized,
+        Forbidden,
+        NotFound,
+        Conflict,
+        Failure
     }
 }
