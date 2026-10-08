@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/Git/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="Andras.Result.Tests/Andras.Result.Tests.csproj" />
   <Project Path="Andras.Result/Andras.Result.csproj" />
 </Solution>

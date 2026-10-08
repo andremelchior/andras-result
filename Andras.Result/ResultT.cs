@@ -1,10 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Andras.Result.Errors;
 
 namespace Andras.Result
 {
-    internal class ResultT
+    public class Result<T> : Result
     {
+        public T? Value { get; }
+
+        private Result(T value)
+            : base(true, null)
+        {
+            Value = value;
+        }
+
+        private Result(Error error)
+            : base(false, error)
+        {
+            Value = default;
+        }
+
+        public static Result<T> Success(T value)
+            => new(value);
+
+        public static Result<T> Failure(Error error)
+            => new(error);
     }
 }
